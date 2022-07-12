@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import {React, Suspense} from 'react'
+import Calculator from './components/Calculator'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import Style from './style.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+    return (
+        <div className='canvas'>
+            
+            <Suspense  >
+                <Canvas >
+                    <Calculator />
+                    <directionalLight intensity={3}/>
+                    <ambientLight intensity={2}/>
+                    <OrbitControls 
+                        maxDistance={2.5}
+                        minDistance={2}
+
+                    />
+
+                </Canvas>
+            </Suspense> 
+        </div>
+    )
 }
-
-export default App;
