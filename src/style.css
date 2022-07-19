@@ -8,3 +8,19 @@
     width: 100vw;
     height: 100vh;
 }
+
+.calculatorScreen{
+    background-color: black;
+    width: 35px;
+    max-height: 16px;
+    position: absolute;
+    top: -27px;
+    right: -18px;
+    font-size: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    align-items: center;
+    color: greenyellow;
+}

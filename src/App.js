@@ -16,7 +16,8 @@ export default function App(){
                     <OrbitControls 
                         maxDistance={2.5}
                         minDistance={2}
-
+                        maxAzimuthAngle={.9}
+                        minAzimuthAngle={-.9}
                     />
 
                 </Canvas>
